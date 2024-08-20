@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "compartir-archivos-php",
+  "private_key_id": "abf490d828df898ca310b80e9e310e43e0e5e982",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDBPIVkcHZ/IlSB\nB7yFovjOaWLE8otVHQhuK53dp8Sa4ESJxSe/2vlyf7lPbc96poG6fA5N+5t42wIL\n41IIXr1IXI7jCT95zXx7ME8rC/6OKwaa7lW4w8+NsJis3MvMq3AOQuBD4+TxhFAg\ntN8E4cL869l3/lHh1LXOYfPeB5mc5F2BfR8FhV+xiSSPEFf4y7oXOJbgFAdtjoX2\nYA7rJA5HT2MIntjq1gyw1wiASBcv252/S0OJqcPAWRJ44AJymzXNM3SgVJtCtamY\niTi/42d0NDhVkZ15dIcfsV2oCPQPOqq6TX60staP9r9TcZTO3kfkhKzp3LT0q2x5\nJHiE9fKTAgMBAAECggEAFINFMcVSfup5B/13QMRtHxRG3NtWeSGM3I0axAXkNACs\npedc8dvf8Qyn8kuY4887JD25EwQrm+e7zuFBuwu7kivpKya3K0np9fXJ4arzSco9\neELmrKd0p/jgLDGAHOjyC0GEJxDRI+ZEz0QEDLOejFTJEBjaPlvjNNZnGeG6p9HS\n7X0TyR3FOPctJd54vVZI8KicvIn+oePVCRSZO2LPK40QJ+i8iUqBvU2t3zhitgDa\nO3ScPTN8Ynp4hIG+40SvOMHHax+w0Hy5aziN4oP7TuhSVrTk7HkoD0X7+CmAJ5cn\n8uQl1kck+fpHfacQG0Io3n25JdqnKRcFB2I7lC3RoQKBgQDnP1kCrt0XKPnN5w/p\neGo2Um9MHSirOZvokyEFHbF/ZhevVYrU2ohPaAR8C1KYiZX1r5dH+AJg0RTrlAz8\n+gqKWTQ7z9f2ZLHUCdpILfII1iQ6V2Chd1UBBwk8w9nKRsWNYMfswNR1qhQa8KuE\nMJHn68XZySBZ67Vcz16HRduzYwKBgQDV65fdjg3Liso11MxXQKWUcKWe6WHzvTjT\nvaJhRUubHrv/6Hmrv63HmEC2valKKXicwNCovqrS6SBZH4saxrOu0n4qsBB2M5YI\ntTYXyyr20NtKA/XBC5O/Vl1Pb0xU+tvL6keKIsk/VY5lPm8ofPM1vbNSBWcO++2h\nVFtN/22jEQKBgBSGeecUEEmy+GE/RhlJ99t0e6581BRGm8EL9h1XIl8Vd7q3VAhK\nkVjC+crs0lr5s1bITBw2NjfTtxCl5nU52F+pRUqdyyRykZopebd4ZIhGQZbwFIKg\nbeoWbsp288jReU1wLq6j+veqrfgqLn8gNIMqWThYcseodUOUoGZPXA3TAoGAa6xg\nzVDCGtBqBXxtugE9FqE4i+sWtZNpthI+WE2Dx7lJkX6XN16MfulgsVp3im+jWOso\nW7dUzkIvWQyqfLjFGlqyzJPARW6jtxBXANTvdDoeFnw1x4wnOuiioOf5eNCnr1Tl\n2161Ax7yRH2Pf8acuFEaoE8912nw6wJFztWhfrECgYEAtFZGKBO0vqW++wEJllkU\nlzvzL1OpC5uEcdAU/vUJ4Ph3IS76ZXaTwApJ/35uHXuZm2E6CsJsh40RZUIr8fCt\nF3aL9eMrCmQiQZnV0Fss8oXq4HWm5KEl4n3d+7Vicn7V5nQl5V+adzMH5Ie2qiNg\naGcLRM/jukzDS4bITVGvCys=\n-----END PRIVATE KEY-----\n",
+  "client_email": "cargar-archivo@compartir-archivos-php.iam.gserviceaccount.com",
+  "client_id": "103982540313261802355",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cargar-archivo%40compartir-archivos-php.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

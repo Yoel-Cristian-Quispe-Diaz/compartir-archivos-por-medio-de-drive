@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mostrar Contenido de Archivo PHP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f2f2f2;
+        }
+
+        #contenidoDiv {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #fff;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="contenidoDiv"></div>
+    <button id="cargarContenido">Cargar Contenido</button>
+
+    <script>
+        $(document).ready(function() {
+            $("#cargarContenido").click(function() {
+                $.ajax({
+                    url: "listar.php", // Ruta al archivo PHP
+                    method: "GET",
+                    success: function(response) {
+                        $("#contenidoDiv").html(response); // Insertar respuesta en el div
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

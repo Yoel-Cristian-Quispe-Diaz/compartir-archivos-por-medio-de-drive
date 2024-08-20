@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+<!--     <link
+      rel="stylesheet"
+      href="http://localhost/practica_php_mysql/formulario_estilo.css"
+    /> -->
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+
+       
+        background: linear-gradient(to right, rgb(124, 228, 86), rgb(243, 238, 152));
+
+      }
+
+
+
+      form {
+        margin: 0 auto;
+        border: 3px solid #f1f1f1;
+        width: 30%;
+        margin-top: 5%;
+        padding: 30px;
+        border-radius: 15px;
+        background-color: rgba(0, 0, 0, 0.55);
+        font-size: 25px;
+        font-style: italic;
+        font-weight: bold;
+        color: rgb(249, 249, 249);
+      }
+      form h3 {
+        font-size: 40px;
+        color: #3498db;
+        text-align: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      input[type="text"],
+      input[type="password"],
+      input[type="date"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 5px dashed #ccc;
+        box-sizing: border-box;
+        background-color: rgba(255, 215, 71, 0.555);
+        font-size: 20px;
+        font-style: oblique;
+        font-weight: bold;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 20px;
+      }
+
+      input[type="submit"]:hover {
+        opacity: 0.5;
+        background-color: red;
+      }
+    </style>
+    <form action="verificar.php" method="post">
+      <h3>Datos Del Usuario</h3>
+      <br />
+      <label for="id1"> Nombre : <input type="text" name="nombre_v" /> </label>
+      <label for="id2">
+        Apellido : <input type="text" name="apellido_v" />
+      </label>
+
+      <input type="submit" />
+    </form>
+  </body>
+</html>

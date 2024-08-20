@@ -1,0 +1,8 @@
+
+
+proyecto java script: para compartir archivos
+
+integrantes:
+	-Yoel Cristian Quispe Diaz
+	-Cesar Ernesto Mosquez C.
+	-Eduardo Reyes Flores

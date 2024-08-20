@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carga y descarga de archivos</title>
+    <style>
+      * {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+.contenedor{
+    width: 95%;
+    margin: auto ;
+}
+
+      h1 {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #3498db;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+        font-family: cursive;
+
+      }
+
+      h2 {
+        margin: 20px 0 10px;
+      }
+
+      form {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      input[type="file"] {
+        margin-right: 10px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      input[type="submit"] {
+        padding: 10px 15px;
+        background-color: #2ecc71;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        margin-bottom: 5px;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      a {
+        color: #3498db;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+      #contenidoDiv {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #fff;
+      }
+
+      button {
+        padding: 10px 15px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+
+/* NUEVO */
+      footer {
+            text-align: center;
+            background-color: #1f1f1f7b;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+
+      
+        }
+        
+        /* Estilos para las iniciales en la parte derecha */
+        .iniciales {
+            float: right;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+    </style>
+  </head>
+
+  <body>
+<div class="contenedor">
+
+    <h1>COMPARTIR ARCHIVOS</h1>
+    <h2>Carga de archivos</h2>
+    <form id="miFormulario" method="post" enctype="multipart/form-data">
+      <input type="file" name="archivo" id="archivo" />
+      <button type="button" id="cargarBoton">Cargar</button>
+    </form>
+    <div>
+      <h2>
+        Ultimo Archivo Subido:
+        <b id="ultimo"> </b>
+      </h2>
+    </div>
+
+    <h2>Archivos disponibles para descarga</h2>
+    <div id="contenidoDiv"></div>
+    <br />
+    <button id="borrarArchivos" onclick="vacia()">Limpiar archivos</button>
+    <button id="botonMostrar">Mostrar Lista de Archivos</button>
+    <button id="botonOcultar">Ocultar Lista de Archivos</button>
+
+
+
+</div>
+
+<footer>
+    Copyright &copy; 2023 - Todos los derechos reservados
+    <div class="iniciales">"YCQD, CEMC, JERF"</div>
+  </footer>
+   
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      function vacia() {
+        document.getElementById("ultimo").innerHTML = "";
+      }
+
+      $(document).ready(function () {
+        $("#cargarBoton").click(function () {
+          var formData = new FormData($("#miFormulario")[0]);
+
+          var request1 = $.ajax({
+            url: "/proyecto_f/index_formulario.php",
+            method: "POST",
+            data: formData,
+            contentType: false,
+            processData: false,
+          });
+
+          var request2 = $.ajax({
+            url: "/proyecto_f/listar.php", // Ruta al segundo archivo PHP
+            method: "POST",
+          });
+
+          $.when(request1, request2).done(function (response1, response2) {
+            $("#ultimo").html(response1[0]); // Obtener el contenido de la respuesta 1
+            $("#contenidoDiv").html(response2[0]);
+          });
+        });
+
+        $("#borrarArchivos").click(function () {
+          $.ajax({
+            url: "Limpiar.php", // Ruta al archivo PHP que genera la lista de archivos
+            method: "POST", //
+            success: function (response) {
+              $("#contenidoDiv").html(response); // Insertar respuesta en el div
+            },
+          });
+        });
+      });
+
+      const div = document.getElementById("contenidoDiv");
+      const botonMostrar = document.getElementById("botonMostrar");
+      const botonOcultar = document.getElementById("botonOcultar");
+
+      botonMostrar.addEventListener("click", function () {
+        div.style.display = "block";
+        $.ajax({
+          url: "listar.php", // Ruta al archivo PHP que genera la lista de archivos
+          method: "POST", //
+          success: function (response) {
+            $("#contenidoDiv").html(response); // Insertar respuesta en el div
+          },
+        });
+      });
+
+      botonOcultar.addEventListener("click", function () {
+        div.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
